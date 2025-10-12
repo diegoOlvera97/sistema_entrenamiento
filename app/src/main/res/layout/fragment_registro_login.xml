@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.loginregistro.Registro_login">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre(s):"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/nombreE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borde_text_edits"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingLeft="5dp"
+            android:layout_centerHorizontal="true"></EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido:"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/nombreE"/>
+
+        <EditText
+            android:id="@+id/apellidoE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:background="@drawable/borde_text_edits"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono:"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/apellidoE"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/telefonoE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:background="@drawable/borde_text_edits"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo Eletrónico:"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/telefonoE"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/correoE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:background="@drawable/borde_text_edits"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/contrasenia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña:"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/correoE"/>
+
+        <EditText
+            android:id="@+id/passE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/contrasenia"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/confirmarpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar contraseña:"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/passE"/>
+
+        <EditText
+            android:id="@+id/passcE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/confirmarpass"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Iniciar Sesión"
+            android:background="@drawable/bottom_shape"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.estasdisticas.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_estadisticasEjercicio"
+            app:destination="@id/estadisticasEjercicio" />
+        <action
+            android:id="@+id/action_navigation_home_to_updateDatos"
+            app:destination="@id/updateDatos" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <!--action
+            android:id="@+id/action_navigation_home_to_firts_login"
+            app:destination="@id/firts_login" /-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.EjerciciosFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_ejercicio_actividad_semana"
+            app:destination="@id/ejercicio_actividad_semana" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_todosLosEjercicio"
+            app:destination="@id/todosLosEjercicio" />
+        <action
+            android:id="@+id/actionNavigationDashboardToEjercicioCategorias"
+            app:destination="@id/ejercioCategorias" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_tipoComida"
+            app:destination="@id/tipoComida" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_tipoColacion"
+            app:destination="@id/tipoColacion" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_agregaCalorias"
+            app:destination="@id/agregaCalorias" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.configuracion.configuracion"
+        android:label="@string/title_settins"
+        tools:layout="@layout/fragment_configuracion" >
+        <action
+            android:id="@+id/action_navigation_settings_to_preferenciasDeVoz"
+            app:destination="@id/preferenciasDeVoz" />
+        <action
+            android:id="@+id/action_navigation_settings_to_acercaDe"
+            app:destination="@id/acercaDe" />
+    </fragment>
+    <fragment
+        android:id="@+id/firts_login"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.loginregistro.Primer_login"
+        android:label=""
+        tools:layout="@layout/fragment_firts_login" >
+        <action
+            android:id="@+id/action_firts_login_to_aceder_login2"
+            app:destination="@id/aceder_login" />
+        <action
+            android:id="@+id/action_firts_login_to_registro_login2"
+            app:destination="@id/registro_login"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/registro_login"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.loginregistro.Registro_login"
+        android:label="Registro"
+        tools:layout="@layout/fragment_registro_login" >
+        <action
+            android:id="@+id/action_registro_login_to_screen_bienvenido2"
+            app:destination="@id/screen_bienvenido" />
+    </fragment>
+    <fragment
+        android:id="@+id/aceder_login"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.loginregistro.Aceder_login"
+        android:label="Inicie sesión"
+        tools:layout="@layout/fragment_aceder_login" >
+        <action
+            android:id="@+id/action_aceder_login_to_screen_bienvenido2"
+            app:destination="@id/screen_bienvenido" />
+    </fragment>
+    <fragment
+        android:id="@+id/screen_bienvenido"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.loginregistro.Screen_bienvenido"
+        android:label="HOLA"
+        tools:layout="@layout/fragment_screen_bienvenido" >
+        <action
+            android:id="@+id/action_screen_bienvenido_to_cuestionario_firts_login2"
+            app:destination="@id/cuestionario_firts_login" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+        <argument
+            android:name="realizarCuestionario"
+            app:argType="boolean" />
+        <argument android:name="idUser"
+            app:argType="string" />
+        <argument
+            android:name="metodologueo"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_screen_bienvenido_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/cuestionario_firts_login"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.formulario.Cuestionario_firts_login"
+        android:label="Cuestionario 1 de 2"
+        tools:layout="@layout/fragment_cuestionario_firts_login" >
+        <argument android:name="idUser"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_cuestionario_firts_login_to_serie_datos_2"
+            app:destination="@id/serie_datos_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio_actividad_semana"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.rutinas.Ejercicio_actividad_semana"
+        android:label="Ejercicios para hoy"
+        tools:layout="@layout/fragment_ejercicio_actividad_semana" >
+        <action
+            android:id="@+id/action_ejercicio_actividad_semana_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/inciar_ejercicio"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.iniciarEjercicio.Inciar_ejercicio"
+        android:label="Nombre ejercicio"
+        tools:layout="@layout/fragment_inciar_ejercicio" >
+        <action
+            android:id="@+id/action_inciar_ejercicio_to_permissionsFragment"
+            app:destination="@id/permissionsFragment"
+            app:popUpTo="@id/inciar_ejercicio" />
+        <argument android:name="nombreEjercicio"
+            app:argType="string" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <argument
+            android:name="idEjer"
+            app:argType="integer" />
+        <argument
+            android:name="habilitarVoz"
+            app:argType="boolean" />
+        <argument android:name="tipoVoz" />
+    </fragment>
+    <fragment
+        android:id="@+id/recomentdacion"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.recomendaciones.Recomentdacion"
+        android:label="Alimentos"
+        tools:layout="@layout/fragment_recomentdacion" >
+        <argument
+            android:name="idAlimento"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/colacion"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.recomendaciones.Colacion"
+        android:label="Colación para hoy"
+        tools:layout="@layout/fragment_colacion" >
+        <argument
+            android:name="idColacion"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/serie_datos_1"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.formulario.AlergiasPantalla"
+        android:label="fragment_serie_datos_1"
+        tools:layout="@layout/fragment_serie_datos_1" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/serie_datos_2"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.formulario.objetivos.CuestionarioObjetivos"
+        android:label="fragment_serie_datos_2"
+        tools:layout="@layout/fragment_serie_datos_2" >
+        <action
+            android:id="@+id/action_serie_datos_2_to_alergias_pantalla2"
+            app:destination="@id/alergias_pantalla" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/alergias_pantalla"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.formulario.PantallaAgradecimiento"
+        android:label="fragment_alergias_pantalla"
+        tools:layout="@layout/fragment_alergias_pantalla" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_alergias_pantalla_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/estadisticasEjercicio"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.estasdisticas.graficasEjercicios.EstadisticasEjercicio"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_estadisticas_ejercicio" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateDatos"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.estasdisticas.UpdateDatos"
+        android:label="Datos HOY"
+        tools:layout="@layout/fragment_update_datos" >
+        <action
+            android:id="@+id/action_updateDatos_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.rutinas.PermissionsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_permissions" >
+        <argument
+            android:name="nombreEjercicio"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_permissionsFragment_to_inciar_ejercicio"
+            app:destination="@id/inciar_ejercicio" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <argument
+            android:name="idEjer"
+            app:argType="integer" />
+        <argument
+            android:name="back"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferenciasDeVoz"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.configuracion.preferenciasDeVoz"
+        android:label="Preferencias de Voz"
+        tools:layout="@layout/fragment_preferencias_de_voz" />
+    <fragment
+        android:id="@+id/todosLosEjercicio"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.todosLosEjercicios.TodosLosEjercicio"
+        android:label="Todos los ejercicios"
+        tools:layout="@layout/fragment_todos_los_ejercicio">
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_todosLosEjercicio_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejerciciosPorParte"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.ejerciosPorPartes.porPartes.EjerciciosPorParte"
+        android:label="Ejercicios"
+        tools:layout="@layout/fragment_ejercicios_por_parte" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_ejerciciosPorParte_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+        <argument
+            android:name="idParteTrabajo"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/acercaDe"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.configuracion.AcercaDe"
+        android:label=""
+        tools:layout="@layout/fragment_acerca_de" />
+    <fragment
+        android:id="@+id/ejercioCategorias"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.ejerciosPorPartes.EjercioCategorias"
+        android:label="Categorias"
+        tools:layout="@layout/fragment_ejercio_categorias" >
+        <action
+            android:id="@+id/action_ejercioCategorias_to_ejerciciosPorParte"
+            app:destination="@id/ejerciciosPorParte" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipoComida"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.tipoComida.TipoComida"
+        android:label="Selecciona una  opción"
+        tools:layout="@layout/fragment_tipo_comida" >
+        <action
+            android:id="@+id/action_tipoComida_to_tipoComidaLista"
+            app:destination="@id/tipoComidaLista" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipoComidaLista"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.tipoComida.tipocomidalista.TipoComidaLista"
+        android:label="Comidas"
+        tools:layout="@layout/fragment_tipo_comida_lista" >
+        <action
+            android:id="@+id/action_tipoComidaLista_to_recomentdacion"
+            app:destination="@id/recomentdacion" />
+        <argument
+            android:name="tipoComida"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipoColacion"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.tipoColacion.TipoColacion"
+        android:label="Selecciona una  opción"
+        tools:layout="@layout/fragment_tipo_colacion" >
+        <action
+            android:id="@+id/action_tipoColacion_to_tipoColacionLista"
+            app:destination="@id/tipoColacionLista" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipoColacionLista"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.tipoColacion.tipocolacionlista.TipoColacionLista"
+        android:label="Bebidas"
+        tools:layout="@layout/fragment_tipo_colacion_lista" >
+        <action
+            android:id="@+id/action_tipoColacionLista_to_colacion"
+            app:destination="@id/colacion" />
+        <argument
+            android:name="tipoColacion"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregaCalorias"
+        android:name="com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.addCalorias.AgregaCalorias"
+        android:label="Calorias"
+        tools:layout="@layout/fragment_agrega_calorias" >
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

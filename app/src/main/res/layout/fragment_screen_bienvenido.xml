@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.loginregistro.Screen_bienvenido"
+    android:background="@color/purple_500"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Bienvenido"
+            android:textSize="60dp"
+            android:fontFamily="@font/roboto_italic"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/welcomeEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "🙌"
+            android:textSize="60dp"
+            android:fontFamily="@font/roboto_italic"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:text="Toque para continuar..."
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+</FrameLayout>

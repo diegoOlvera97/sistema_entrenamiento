@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "324355427832",
+    "project_id": "sistema-entrenamiento-e3ba7",
+    "storage_bucket": "sistema-entrenamiento-e3ba7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324355427832:android:a226ce7b30462a2b4e9a0d",
+        "android_client_info": {
+          "package_name": "com.example.sistemaentrenamientocorporalypreparacinfisica"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK6syataqJD50xIKxk8kG4r4vs59PFC_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

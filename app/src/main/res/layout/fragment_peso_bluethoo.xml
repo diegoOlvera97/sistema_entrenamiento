@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.estasdisticas.AgregarValoresBluethoo.PesoBluethoo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/btDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Devices" />
+
+        <ImageView
+            android:id="@+id/seachDevices2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_border"
+            android:src="@drawable/search_24px"
+            >
+        </ImageView>
+        <Button
+            android:id="@+id/seachDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Devices" />
+
+        <Button
+            android:id="@+id/connectToDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect to Device"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/btReadings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Readings" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Text" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

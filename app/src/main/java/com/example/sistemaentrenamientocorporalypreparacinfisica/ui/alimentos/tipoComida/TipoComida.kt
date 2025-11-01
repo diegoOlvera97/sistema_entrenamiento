@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.sistemaentrenamientocorporalypreparacinfisica.R
-import com.example.sistemaentrenamientocorporalypreparacinfisica.databinding.FragmentHomeBinding
 import com.example.sistemaentrenamientocorporalypreparacinfisica.databinding.FragmentTipoComidaBinding
-import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.tipoComida.tipocomidalista.TipoComidaListaDirections
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

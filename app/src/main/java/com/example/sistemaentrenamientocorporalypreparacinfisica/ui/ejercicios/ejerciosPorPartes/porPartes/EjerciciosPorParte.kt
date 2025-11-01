@@ -19,9 +19,6 @@ import com.example.sistemaentrenamientocorporalypreparacinfisica.model.Ejercicio
 import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.iniciarEjercicio.LivePreviewActivity
 import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.todosLosEjercicios.TodosLosEjercicio
 
-
-
-
 class EjerciciosPorParte : Fragment() {
 
     private var _binding: FragmentEjerciciosPorParteBinding? = null

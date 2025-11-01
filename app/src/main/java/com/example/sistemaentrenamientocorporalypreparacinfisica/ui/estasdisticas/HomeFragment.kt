@@ -14,7 +14,6 @@ import com.example.sistemaentrenamientocorporalypreparacinfisica.R
 import com.example.sistemaentrenamientocorporalypreparacinfisica.databinding.FragmentHomeBinding
 import kotlinx.coroutines.launch
 
-
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

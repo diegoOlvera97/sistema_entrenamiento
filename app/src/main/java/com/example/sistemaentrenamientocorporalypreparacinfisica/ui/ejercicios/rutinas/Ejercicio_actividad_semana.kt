@@ -6,30 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sistemaentrenamientocorporalypreparacinfisica.databinding.FragmentEjercicioActividadSemanaBinding
 import com.example.sistemaentrenamientocorporalypreparacinfisica.model.Ejercicio
 import android.content.Context
 import android.content.Intent
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import com.example.sistemaentrenamientocorporalypreparacinfisica.MainActivity
-import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.AlimentosViewModelFactory
-import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.alimentos.NotificationsViewModel
 import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.iniciarEjercicio.LivePreviewActivity
 import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.ejercicios.todosLosEjercicios.TodosLosEjercicio
-import com.example.sistemaentrenamientocorporalypreparacinfisica.ui.estasdisticas.EstadisticasViewModel
-import kotlinx.coroutines.launch
 import org.tensorflow.lite.Interpreter
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
 import java.io.FileInputStream
-import java.nio.ByteBuffer
-
 
 class Ejercicio_actividad_semana : Fragment() {
 

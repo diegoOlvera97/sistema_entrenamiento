@@ -51,11 +51,8 @@ import com.google.android.gms.common.annotation.KeepName
 import kotlinx.coroutines.launch
 import java.io.IOException
 
-/** Live preview demo for ML Kit APIs. */
 @KeepName
 class
-
-
 
 LivePreviewActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener, CompoundButton.OnCheckedChangeListener {
 

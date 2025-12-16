@@ -134,14 +134,12 @@ Sincronizar dependencias y ejecutar la aplicación en un dispositivo o emulador.
 
 Estado del proyecto
 
-Actualmente el proyecto se encuentra en su fase final de desarrollo, con aproximadamente un 90 % de avance funcional.
-Las próximas etapas estarán enfocadas en:
+Actualmente el proyecto se encuentra en su fase final del desarrollo
 
-Documentación técnica complementaria.
+Credenciales para la base de datos en Supabase:
 
-Pruebas de usuario y optimización visual.
-
-Elaboración del informe final de residencias.
+Usuario: diegotese3001@gmail.com
+Contraseña: 30.Diego.79
 
 Créditos
 
